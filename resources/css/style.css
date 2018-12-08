@@ -7,6 +7,10 @@ html {
   font-size: 16px;
 }
 
+body {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
   color: #4a4a4a;
@@ -14,7 +18,9 @@ a {
 
 .main-content {
   position: relative;
-  top: 5.3125rem;}
+  top: 5.3125rem;
+}
+
 
  /* To offset for fixed header. */
 
@@ -65,12 +71,14 @@ header {
   border-bottom: 1px solid #c6c1c1;
   background-color: white;
   height: 5.3125rem;
+  z-index: 1;
 }
 
 
 
 header .content {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -153,6 +161,7 @@ header .mobile {
 
 #sign-up-section {
   display: flex;
+
   justify-content: flex-start;
   align-items: flex-start;
   background-image:  url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/capstone-1/solution/resources/images/banner-landingpage.jpg);
@@ -167,13 +176,13 @@ header .mobile {
 #sign-up-cta {
   position: relative;
   top: 10.625rem;
-  margin-bottom: 10.625rem;
-  margin-left: 6.25rem;
-  padding: 2rem 5rem 3.5rem 5rem;
+  bottom: 10.625rem;
+  left: 6.25rem;
   border: 1px solid #979797;
   border-radius: 4px;
   background-color: #9dc20b;
-  width: 25.5rem;
+  width: 35.5rem;
+  height: 22rem;
 }
 
 
@@ -189,6 +198,12 @@ header .mobile {
 
 #sign-up-cta h1 {
   font-size: 3.125rem;
+  font-weight: normal;
+}
+
+
+#sign-up-cta h2 {
+  font-weight: normal;
 }
 
 
@@ -200,34 +215,39 @@ header .mobile {
 
 #sign-up-cta .email {
   font-size: 1.25rem;
-  padding bottom: 1.625rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
 }
 
 #sign-up-cta .cursive {
   font-family: "Damion", "cursive";
-  padding-top: 2rem;
-  padding-bottom: .75rem;
+  margin-top: 2rem;
+  margin-bottom: .25rem;
 }
 
 
 
 #sign-up-cta .striking {
   font-family: "Rubik", sans-serif;
-  padding-bottom: .75rem;
   font-size: 3.125rem;
+  margin-top: .5rem;
+  margin-bottom: .75rem;
 }
 
 
 
 #sign-up-cta .button {
   display: flex;
-  padding-top: 1.625rem 5rem 3.5rem 5rem;
   height: 4rem;
   background-color: #4a4a4a;
   align-items: center;
   justify-content: center;
   border-radius: .25rem;
   width: 25.5rem;
+  margin-top: 1.625rem;
+  margin-bottom: 3.5rem;
 }
 
 
@@ -287,9 +307,8 @@ header .mobile {
 
 
 #features-section {
-  display: flex;
+  display: inline-block;
   justify-content: space-between;
-  padding: 4rem 5%;
   background-color: #f3f3f3;
 }
 
@@ -297,17 +316,17 @@ header .mobile {
 
 .feature {
   flex: 1;
-  padding: 2rem;
-  margin: 0px 1.25rem;
+  margin: 4rem 1.1875rem 2.875rem 1.1875rem;
+  height: 20rem;
   background-color: white;
+  width: 20rem;
 }
 
 
-
-.feature .image-container {
+.image-container .feature {
   width: 90%;
   height: 65%;
-  margin: 0 auto;
+  margin: 2rem 2rem 2.5rem 2rem;
 }
 
 
