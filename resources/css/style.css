@@ -78,7 +78,6 @@ header {
 
 header .content {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -315,18 +314,24 @@ header .mobile {
 
 
 .feature {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   flex: 1;
-  margin: 4rem 1.1875rem 2.875rem 1.1875rem;
-  height: 20rem;
+  margin-top: 4rem;
+  margin-right: 2.375rem ;
+  margin-bottom: 2.875rem;
+  height: 39.6875rem;
   background-color: white;
-  width: 20rem;
+  width: 40rem;
 }
 
 
-.image-container .feature {
+#feature-1 .feature {
+  float: left;
   width: 90%;
   height: 65%;
-  margin: 2rem 2rem 2.5rem 2rem;
+  margin: 2rem 2rem 11.6875rem 2rem;
 }
 
 
