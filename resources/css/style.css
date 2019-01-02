@@ -1,36 +1,18 @@
 /* Universal Styles */
 
-
-
 html {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
-body {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #4a4a4a;
-}
-
 .main-content {
   position: relative;
-  top: 5.3125rem;
+  top: 5.3125rem; /* To offset for fixed header. */
 }
-
-
- /* To offset for fixed header. */
-
-
 
 .center {
   text-align: center;
 }
-
-
 
 .button {
   border-radius: 4px;
@@ -38,19 +20,14 @@ a {
   color: white;
 }
 
-
-
 .image-container {
   overflow: hidden;
 }
 
-
-
 .image-container img {
   display: block;
+  max-width: 100%;
 }
-
-
 
 @media only screen and (max-width: 760px) {
   .main-content {
@@ -58,52 +35,39 @@ a {
   }
 }
 
-
-
 /* Header */
-
-
 
 header {
   position: fixed;
+  z-index: 100;
   width: 100%;
-  align-items: center;
-  border-bottom: 1px solid #c6c1c1;
+  border-bottom: solid 1px #c6c1c1;
   background-color: white;
-  height: 5.3125rem;
-  z-index: 1;
 }
-
-
 
 header .content {
   display: flex;
   align-items: center;
+  padding: 1.875rem;
 }
-
-
 
 header .logo {
-  padding-left: 1.875rem;
   flex: 1;
 }
-
-
 
 header nav ul {
   display: flex;
 }
 
-
-
 nav li {
   padding-left: 3.5rem;
-  line-height: 1.6;
 }
 
-
-header nav ul {
-  list-style-type: none;
+nav a {
+  vertical-align: bottom;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #4a4a4a;
 }
 
 header .icon {
@@ -111,13 +75,9 @@ header .icon {
   padding-left: .75rem;
 }
 
-
-
 header .mobile {
   display: none;
 }
-
-
 
 @media only screen and (max-width: 760px) {
   header .desktop {
@@ -146,110 +106,69 @@ header .mobile {
 
   header .mobile .button {
     padding: .1875rem .5rem;
-    background-color: #9DC20A;
+    background-color: #9dc20b;
     line-height: 1.6;
     color: white;
   }
 }
 
-
-
 /* Sign Up Section */
-
-
 
 #sign-up-section {
   display: flex;
-
   justify-content: flex-start;
   align-items: flex-start;
-  background-image:  url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/capstone-1/solution/resources/images/banner-landingpage.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   height: 43.5rem;
+  background-image: url('../images/banner-landingpage-fotomatic.jpg');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
-
 
 #sign-up-cta {
   position: relative;
-  top: 10.625rem;
-  bottom: 10.625rem;
-  left: 6.25rem;
-  border: 1px solid #979797;
+  top: 171px;
+  left: 10%;
+  padding: 0 5rem 2.5rem 5rem;
+  border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
-  width: 35.5rem;
-  height: 22rem;
 }
 
-
-
 #sign-up-cta .content {
+  width: 25.625rem;
+  margin-top: 2rem;
   font-family: "Roboto", sans-serif;
   font-size: 1.25rem;
   line-height: 1.4;
   color: white;
 }
 
-
-
 #sign-up-cta h1 {
   font-size: 3.125rem;
-  font-weight: normal;
 }
-
 
 #sign-up-cta h2 {
-  font-weight: normal;
+  font-size: 2.25rem;
 }
-
-
 
 #sign-up-cta span strong {
   font-weight: bold;
 }
 
-
-#sign-up-cta .email {
-  font-size: 1.25rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  font-weight: lighter;
-  font-family: "Roboto", sans-serif;
-}
-
 #sign-up-cta .cursive {
-  font-family: "Damion", "cursive";
-  margin-top: 2rem;
-  margin-bottom: .25rem;
+  font-family: "Damion", cursive;
 }
-
-
 
 #sign-up-cta .striking {
   font-family: "Rubik", sans-serif;
-  font-size: 3.125rem;
-  margin-top: .5rem;
-  margin-bottom: .75rem;
+  padding-bottom: .75rem;
 }
-
-
 
 #sign-up-cta .button {
-  display: flex;
-  height: 4rem;
-  background-color: #4a4a4a;
-  align-items: center;
-  justify-content: center;
-  border-radius: .25rem;
-  width: 25.5rem;
   margin-top: 1.625rem;
-  margin-bottom: 3.5rem;
+  padding: 1.25rem 7.25rem;
 }
-
-
 
 @media only screen and (max-width: 760px) {
   #sign-up-section {
@@ -283,8 +202,6 @@ header .mobile {
   }
 }
 
-
-
 @media only screen and (max-width: 450px) {
   #sign-up-section {
     height: 20rem;
@@ -299,42 +216,31 @@ header .mobile {
   }
 }
 
-
-
 /* Features Section */
 
-
-
 #features-section {
-  display: inline-block;
+  display: flex;
   justify-content: space-between;
+  padding: 4rem 5%;
   background-color: #f3f3f3;
 }
 
-
-
 .feature {
-  display: inline-flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
   flex: 1;
-  margin-top: 4rem;
-  margin-right: 2.375rem ;
-  margin-bottom: 2.875rem;
-  height: 39.6875rem;
+  padding: 2rem;
+  margin: 0px 1.25rem;
   background-color: white;
-  width: 40rem;
 }
 
-
-#feature-1 .feature {
-  float: left;
+.feature .image-container {
   width: 90%;
   height: 65%;
-  margin: 2rem 2rem 11.6875rem 2rem;
+  margin: 0 auto;
 }
 
-
+.feature .content {
+  padding: 2.5rem 0;
+}
 
 .feature h2 {
   padding-bottom: .5rem;
@@ -343,16 +249,12 @@ header .mobile {
   color: #4a4a4a;
 }
 
-
-
 .feature h3 {
   font-size: 1rem;
   line-height: 1.2;
   font-weight: 300;
   color: #4a4a4a;
 }
-
-
 
 @media only screen and (max-width: 890px) {
   .feature h2 {
@@ -367,8 +269,6 @@ header .mobile {
   }
 }
 
-
-
 @media only screen and (max-width: 760px) {
   #features-section {
     flex-flow: column;
@@ -379,35 +279,29 @@ header .mobile {
     margin: 0;
     padding: 1.25rem 1rem 0 1rem;
   }
+
+  .feature .content {
+    padding: 1.25rem 0 1.875rem 0;
+  }
 }
 
-
-
 /* Filters Section */
-
-
 
 #filters-section {
   padding: 4rem 0;
   background-color: #4a4a4a;
 }
 
-
-
 #filters-section .content {
   padding: 0 .625rem;
   margin-bottom: 5rem;
 }
-
-
 
 #filters-section .content h2 {
   font-size: 2.25rem;
   font-weight: bold;
   color: white;
 }
-
-
 
 #filters-section .content h3 {
   font-size: 1rem;
@@ -416,14 +310,11 @@ header .mobile {
   color: white;
 }
 
-
-
 #filters-section .images-container {
+  display: flex;
   max-width: 100%;
   padding: 0 1%;
 }
-
-
 
 @media only screen and (max-width: 760px) {
   #filters-section {
@@ -455,25 +346,17 @@ header .mobile {
   }
 }
 
-
-
 /* Quotes Section */
-
-
 
 #quotes-section {
   background-color: #f3f3f3;
 }
 
-
-
-#quotes-section content {
+#quotes-section .content {
   padding: 5rem 0;
 }
 
-
-
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
@@ -482,43 +365,33 @@ header .mobile {
   color: #4a4a4a;
 }
 
-
-
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
 }
 
-
-
 @media only screen and (max-width: 760px) {
-  #quotes-section content {
+  #quotes-section .content {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
     margin: auto;
   }
 }
 
-
-
 /* Footer */
-
-
 
 footer {
   background-color: #9b9b9b;
   padding: 1.5rem 2rem;
 }
-
-
 
 footer .content {
   color: white;
@@ -526,15 +399,11 @@ footer .content {
   font-size: .75rem;
 }
 
-
-
 footer .copyright {
   flex-grow: 1;
 }
 
-
-
-@media only screen and (min-width: 760px) {
+@media only screen and (max-width: 760px) {
   footer .content {
     font-size: .625rem;
   }
